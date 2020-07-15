@@ -155,5 +155,13 @@ namespace FreezeTest.Views
 				 }
 			};
 		}
+
+		protected override bool OnBackButtonPressed()
+		{
+			//return base.OnBackButtonPressed();
+			MainThread.BeginInvokeOnMainThread(async () => await Navigation.PopToRootAsync().ConfigureAwait(true));
+			return true;
+			//return false;
+		}
 	}
 }
