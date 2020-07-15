@@ -3,4 +3,8 @@
 ################################################################################
 
 /FreezeTest/FreezeTest/bin
+/FreezeTest/FreezeTest/obj
 /FreezeTest/FreezeTest.Android/bin
+/FreezeTest/FreezeTest.Android/obj
+/FreezeTest/FreezeTest.iOS/bin
+/FreezeTest/FreezeTest.iOS/obj
