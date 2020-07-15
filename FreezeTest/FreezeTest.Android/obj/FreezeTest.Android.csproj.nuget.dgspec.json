@@ -23,14 +23,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "monoandroid90"
+          "monoandroid10.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "monoandroid90": {
+          "monoandroid10.0": {
             "projectReferences": {
               "C:\\Users\\tyler\\source\\repos\\FreezeTest\\FreezeTest\\FreezeTest\\FreezeTest.csproj": {
                 "projectPath": "C:\\Users\\tyler\\source\\repos\\FreezeTest\\FreezeTest\\FreezeTest\\FreezeTest.csproj"
@@ -40,31 +40,35 @@
         }
       },
       "frameworks": {
-        "monoandroid90": {
+        "monoandroid10.0": {
           "dependencies": {
             "Acr.UserDialogs": {
               "target": "Package",
-              "version": "[7.1.0.442, )"
+              "version": "[7.1.0.446, )"
             },
             "AiForms.SettingsView": {
               "target": "Package",
               "version": "[1.2.14-pre, )"
             },
+            "LibVLCSharp.Forms": {
+              "target": "Package",
+              "version": "[3.4.6, )"
+            },
             "MailKit": {
               "target": "Package",
-              "version": "[2.7.0, )"
+              "version": "[2.8.0, )"
             },
             "Microsoft.AppCenter": {
               "target": "Package",
-              "version": "[3.2.2, )"
+              "version": "[3.3.0, )"
             },
             "Microsoft.AppCenter.Analytics": {
               "target": "Package",
-              "version": "[3.2.2, )"
+              "version": "[3.3.0, )"
             },
             "Microsoft.AppCenter.Crashes": {
               "target": "Package",
-              "version": "[3.2.2, )"
+              "version": "[3.3.0, )"
             },
             "Microsoft.CSharp": {
               "target": "Package",
@@ -92,11 +96,11 @@
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[3.1.5, )"
+              "version": "[3.1.6, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
-              "version": "[3.1.5, )"
+              "version": "[3.1.6, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -108,7 +112,7 @@
             },
             "Plugin.NFC": {
               "target": "Package",
-              "version": "[0.1.16, )"
+              "version": "[0.1.17, )"
             },
             "Plugin.Permissions": {
               "target": "Package",
@@ -117,6 +121,10 @@
             "Steema.TeeChart.NET.Xamarin.Forms": {
               "target": "Package",
               "version": "[4.2020.5.28, )"
+            },
+            "VideoLAN.LibVLC.Android": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             },
             "Xam.Plugin.LatestVersion": {
               "target": "Package",
@@ -134,14 +142,6 @@
               "target": "Package",
               "version": "[1.4.0, )"
             },
-            "Xamarin.Android.Support.Compat": {
-              "target": "Package",
-              "version": "[28.0.0.3, )"
-            },
-            "Xamarin.Android.Support.v4": {
-              "target": "Package",
-              "version": "[28.0.0.3, )"
-            },
             "Xamarin.Android.Support.v7.AppCompat": {
               "target": "Package",
               "version": "[28.0.0.3, )"
@@ -149,6 +149,10 @@
             "Xamarin.Android.Support.v7.RecyclerView": {
               "target": "Package",
               "version": "[28.0.0.3, )"
+            },
+            "Xamarin.AndroidX.AppCompat": {
+              "target": "Package",
+              "version": "[1.1.0.1, )"
             },
             "Xamarin.AndroidX.AppCompat.AppCompatResources": {
               "target": "Package",
@@ -158,21 +162,49 @@
               "target": "Package",
               "version": "[1.2.0.1, )"
             },
+            "Xamarin.AndroidX.Core": {
+              "target": "Package",
+              "version": "[1.2.0.1, )"
+            },
+            "Xamarin.AndroidX.Legacy.Support.V4": {
+              "target": "Package",
+              "version": "[1.0.0.1, )"
+            },
+            "Xamarin.AndroidX.Legacy.Support.V4": {
+              "target": "Package",
+              "version": "[1.0.0.1, )"
+            },
+            "Xamarin.AndroidX.Lifecycle.LiveData": {
+              "target": "Package",
+              "version": "[2.2.0.1, )"
+            },
+            "Xamarin.AndroidX.Migration": {
+              "target": "Package",
+              "version": "[1.0.6.1, )"
+            },
+            "Xamarin.AndroidX.RecyclerView": {
+              "target": "Package",
+              "version": "[1.1.0.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.5.3.2, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.6.0.967, )"
+              "version": "[4.7.0.1080, )"
+            },
+            "Xamarin.Google.Android.Material": {
+              "target": "Package",
+              "version": "[1.0.0.1, )"
             },
             "ZXing.Net.Mobile": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[3.0.0-beta5, )"
             },
             "ZXing.Net.Mobile.Forms": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[3.0.0-beta5, )"
             }
           }
         }
@@ -218,27 +250,31 @@
           "dependencies": {
             "Acr.UserDialogs": {
               "target": "Package",
-              "version": "[7.1.0.442, )"
+              "version": "[7.1.0.446, )"
             },
             "AiForms.SettingsView": {
               "target": "Package",
               "version": "[1.2.14-pre, )"
             },
+            "LibVLCSharp.Forms": {
+              "target": "Package",
+              "version": "[3.4.6, )"
+            },
             "MailKit": {
               "target": "Package",
-              "version": "[2.7.0, )"
+              "version": "[2.8.0, )"
             },
             "Microsoft.AppCenter": {
               "target": "Package",
-              "version": "[3.2.2, )"
+              "version": "[3.3.0, )"
             },
             "Microsoft.AppCenter.Analytics": {
               "target": "Package",
-              "version": "[3.2.2, )"
+              "version": "[3.3.0, )"
             },
             "Microsoft.AppCenter.Crashes": {
               "target": "Package",
-              "version": "[3.2.2, )"
+              "version": "[3.3.0, )"
             },
             "Microsoft.CSharp": {
               "target": "Package",
@@ -266,11 +302,11 @@
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[3.1.5, )"
+              "version": "[3.1.6, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
-              "version": "[3.1.5, )"
+              "version": "[3.1.6, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -284,7 +320,7 @@
             },
             "Plugin.NFC": {
               "target": "Package",
-              "version": "[0.1.16, )"
+              "version": "[0.1.17, )"
             },
             "Plugin.Permissions": {
               "target": "Package",
@@ -316,15 +352,15 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.6.0.967, )"
+              "version": "[4.7.0.1080, )"
             },
             "ZXing.Net.Mobile": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[3.0.0-beta5, )"
             },
             "ZXing.Net.Mobile.Forms": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[3.0.0-beta5, )"
             }
           },
           "imports": [
@@ -337,7 +373,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

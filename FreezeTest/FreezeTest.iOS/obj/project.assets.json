@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
-      "Acr.UserDialogs/7.1.0.442": {
+      "Acr.UserDialogs/7.1.0.446": {
         "type": "package",
         "dependencies": {
           "BTProgressHUD": "1.3.1"
@@ -40,10 +40,40 @@
           "lib/xamarinios10/BTProgressHUD.dll": {}
         }
       },
-      "MailKit/2.7.0": {
+      "LibVLCSharp/3.4.6": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/LibVLCSharp.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/LibVLCSharp.dll": {}
+        }
+      },
+      "LibVLCSharp.Forms/3.4.6": {
         "type": "package",
         "dependencies": {
-          "MimeKit": "2.8.0",
+          "LibVLCSharp": "3.4.6",
+          "Xamarin.Forms": "3.2.0.871581"
+        },
+        "compile": {
+          "lib/xamarinios10/LibVLCSharp.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/LibVLCSharp.Forms.dll": {}
+        },
+        "resource": {
+          "lib/xamarinios10/fr/LibVLCSharp.Forms.resources.dll": {
+            "locale": "fr"
+          }
+        }
+      },
+      "MailKit/2.8.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "2.9.1",
           "System.Net.NameResolution": "4.3.0",
           "System.Net.Security": "4.3.2",
           "System.Runtime.Serialization.Primitives": "4.3.0"
@@ -61,7 +91,7 @@
           "lib/netstandard2.0/MailKit.dll": {}
         }
       },
-      "Microsoft.AppCenter/3.2.2": {
+      "Microsoft.AppCenter/3.3.0": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.dll": {},
@@ -72,10 +102,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/3.2.2": {
+      "Microsoft.AppCenter.Analytics/3.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.2"
+          "Microsoft.AppCenter": "3.3.0"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll": {},
@@ -86,10 +116,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/3.2.2": {
+      "Microsoft.AppCenter.Crashes/3.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.2"
+          "Microsoft.AppCenter": "3.3.0"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll": {},
@@ -255,10 +285,10 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Microsoft.Extensions.Configuration/3.1.5": {
+      "Microsoft.Extensions.Configuration/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "3.1.5"
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
@@ -267,10 +297,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/3.1.5": {
+      "Microsoft.Extensions.Configuration.Abstractions/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.5"
+          "Microsoft.Extensions.Primitives": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -279,10 +309,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/3.1.5": {
+      "Microsoft.Extensions.Configuration.Binder/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration": "3.1.5"
+          "Microsoft.Extensions.Configuration": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
@@ -291,10 +321,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.5": {
+      "Microsoft.Extensions.DependencyInjection/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.5"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
@@ -303,7 +333,7 @@
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.5": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -312,13 +342,13 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging/3.1.5": {
+      "Microsoft.Extensions.Logging/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Binder": "3.1.5",
-          "Microsoft.Extensions.DependencyInjection": "3.1.5",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.5",
-          "Microsoft.Extensions.Options": "3.1.5"
+          "Microsoft.Extensions.Configuration.Binder": "3.1.6",
+          "Microsoft.Extensions.DependencyInjection": "3.1.6",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.6",
+          "Microsoft.Extensions.Options": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
@@ -327,7 +357,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/3.1.5": {
+      "Microsoft.Extensions.Logging.Abstractions/3.1.6": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
@@ -336,11 +366,11 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Options/3.1.5": {
+      "Microsoft.Extensions.Options/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.5",
-          "Microsoft.Extensions.Primitives": "3.1.5",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6",
+          "Microsoft.Extensions.Primitives": "3.1.6",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
@@ -350,7 +380,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.1.5": {
+      "Microsoft.Extensions.Primitives/3.1.6": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.2",
@@ -375,12 +405,11 @@
           "build/Microsoft.NetFramework.Analyzers.props": {}
         }
       },
-      "MimeKit/2.8.0": {
+      "MimeKit/2.9.1": {
         "type": "package",
         "dependencies": {
           "Portable.BouncyCastle": "1.8.5",
           "System.Reflection.TypeExtensions": "4.4.0",
-          "System.Security.Cryptography.Cng": "4.4.0",
           "System.Text.Encoding.CodePages": "4.4.0"
         },
         "frameworkAssemblies": [
@@ -405,7 +434,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Plugin.NFC/0.1.16": {
+      "Plugin.NFC/0.1.17": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Drawing.Common.dll"
@@ -569,21 +598,6 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.Security.Cryptography.Cng/4.4.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.0/System.Security.Cryptography.Cng.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Security.Cryptography.Cng.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Cng.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
       "System.Text.Encoding.CodePages/4.5.1": {
         "type": "package",
         "compile": {
@@ -606,6 +620,12 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "VideoLAN.LibVLC.iOS/3.3.10": {
+        "type": "package",
+        "build": {
+          "build/VideoLAN.LibVLC.iOS.targets": {}
         }
       },
       "Xam.Plugin.LatestVersion/1.1.2": {
@@ -673,7 +693,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.6.0.967": {
+      "Xamarin.Forms/4.7.0.1080": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -749,8 +769,8 @@
           "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pl"
           },
-          "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll": {
-            "locale": "pt-br"
+          "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll": {
+            "locale": "pt-BR"
           },
           "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pt"
@@ -794,51 +814,52 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "ZXing.Net.Mobile/2.4.1": {
-        "type": "package",
-        "compile": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll": {},
-          "lib/Xamarin.iOS10/ZXingNetMobile.dll": {},
-          "lib/Xamarin.iOS10/zxing.portable.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll": {},
-          "lib/Xamarin.iOS10/ZXingNetMobile.dll": {},
-          "lib/Xamarin.iOS10/zxing.portable.dll": {}
-        }
-      },
-      "ZXing.Net.Mobile.Forms/2.4.1": {
+      "ZXing.Net.Mobile/3.0.0-beta5": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203",
-          "ZXing.Net.Mobile": "2.4.1"
+          "Xamarin.Essentials": "1.5.1"
         },
         "compile": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.dll": {},
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.iOS.dll": {}
+          "lib/xamarinios10/ZXingNetMobile.dll": {},
+          "lib/xamarinios10/zxing.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.dll": {},
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.iOS.dll": {}
+          "lib/xamarinios10/ZXingNetMobile.dll": {},
+          "lib/xamarinios10/zxing.dll": {}
+        }
+      },
+      "ZXing.Net.Mobile.Forms/3.0.0-beta5": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.5.1",
+          "Xamarin.Forms": "4.5.0.356",
+          "ZXing.Net.Mobile": "3.0.0-beta5"
+        },
+        "compile": {
+          "lib/xamarinios10/ZXing.Net.Mobile.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/ZXing.Net.Mobile.Forms.dll": {}
         }
       },
       "FreezeTest/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.1.0.442",
+          "Acr.UserDialogs": "7.1.0.446",
           "AiForms.SettingsView": "1.2.14-pre",
-          "MailKit": "2.7.0",
-          "Microsoft.AppCenter": "3.2.2",
-          "Microsoft.AppCenter.Analytics": "3.2.2",
-          "Microsoft.AppCenter.Crashes": "3.2.2",
+          "LibVLCSharp.Forms": "3.4.6",
+          "MailKit": "2.8.0",
+          "Microsoft.AppCenter": "3.3.0",
+          "Microsoft.AppCenter.Analytics": "3.3.0",
+          "Microsoft.AppCenter.Crashes": "3.3.0",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.CodeAnalysis.CSharp": "3.6.0",
           "Microsoft.CodeAnalysis.Common": "3.6.0",
-          "Microsoft.Extensions.DependencyInjection": "3.1.5",
-          "Microsoft.Extensions.Logging": "3.1.5",
+          "Microsoft.Extensions.DependencyInjection": "3.1.6",
+          "Microsoft.Extensions.Logging": "3.1.6",
           "Newtonsoft.Json": "12.0.3",
-          "Plugin.NFC": "0.1.16",
+          "Plugin.NFC": "0.1.17",
           "Plugin.Permissions": "6.0.1",
           "Steema.TeeChart.NET.Xamarin.Forms": "4.2020.5.28",
           "Xam.Plugin.LatestVersion": "1.1.2",
@@ -846,9 +867,9 @@
           "Xam.Plugin.Screenshot": "2.0.3",
           "Xam.Plugin.SimpleAudioPlayer": "1.4.0",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.6.0.967",
-          "ZXing.Net.Mobile": "2.4.1",
-          "ZXing.Net.Mobile.Forms": "2.4.1"
+          "Xamarin.Forms": "4.7.0.1080",
+          "ZXing.Net.Mobile": "3.0.0-beta5",
+          "ZXing.Net.Mobile.Forms": "3.0.0-beta5"
         },
         "compile": {
           "bin/placeholder/FreezeTest.dll": {}
@@ -859,7 +880,7 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
-      "Acr.UserDialogs/7.1.0.442": {
+      "Acr.UserDialogs/7.1.0.446": {
         "type": "package",
         "dependencies": {
           "BTProgressHUD": "1.3.1"
@@ -897,10 +918,40 @@
           "lib/xamarinios10/BTProgressHUD.dll": {}
         }
       },
-      "MailKit/2.7.0": {
+      "LibVLCSharp/3.4.6": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/LibVLCSharp.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/LibVLCSharp.dll": {}
+        }
+      },
+      "LibVLCSharp.Forms/3.4.6": {
         "type": "package",
         "dependencies": {
-          "MimeKit": "2.8.0",
+          "LibVLCSharp": "3.4.6",
+          "Xamarin.Forms": "3.2.0.871581"
+        },
+        "compile": {
+          "lib/xamarinios10/LibVLCSharp.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/LibVLCSharp.Forms.dll": {}
+        },
+        "resource": {
+          "lib/xamarinios10/fr/LibVLCSharp.Forms.resources.dll": {
+            "locale": "fr"
+          }
+        }
+      },
+      "MailKit/2.8.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "2.9.1",
           "System.Net.NameResolution": "4.3.0",
           "System.Net.Security": "4.3.2",
           "System.Runtime.Serialization.Primitives": "4.3.0"
@@ -918,7 +969,7 @@
           "lib/netstandard2.0/MailKit.dll": {}
         }
       },
-      "Microsoft.AppCenter/3.2.2": {
+      "Microsoft.AppCenter/3.3.0": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.dll": {},
@@ -929,10 +980,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/3.2.2": {
+      "Microsoft.AppCenter.Analytics/3.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.2"
+          "Microsoft.AppCenter": "3.3.0"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll": {},
@@ -943,10 +994,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/3.2.2": {
+      "Microsoft.AppCenter.Crashes/3.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.2"
+          "Microsoft.AppCenter": "3.3.0"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll": {},
@@ -1112,10 +1163,10 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Microsoft.Extensions.Configuration/3.1.5": {
+      "Microsoft.Extensions.Configuration/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "3.1.5"
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
@@ -1124,10 +1175,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/3.1.5": {
+      "Microsoft.Extensions.Configuration.Abstractions/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.5"
+          "Microsoft.Extensions.Primitives": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -1136,10 +1187,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/3.1.5": {
+      "Microsoft.Extensions.Configuration.Binder/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration": "3.1.5"
+          "Microsoft.Extensions.Configuration": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
@@ -1148,10 +1199,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.5": {
+      "Microsoft.Extensions.DependencyInjection/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.5"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
@@ -1160,7 +1211,7 @@
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.5": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -1169,13 +1220,13 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging/3.1.5": {
+      "Microsoft.Extensions.Logging/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Binder": "3.1.5",
-          "Microsoft.Extensions.DependencyInjection": "3.1.5",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.5",
-          "Microsoft.Extensions.Options": "3.1.5"
+          "Microsoft.Extensions.Configuration.Binder": "3.1.6",
+          "Microsoft.Extensions.DependencyInjection": "3.1.6",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.6",
+          "Microsoft.Extensions.Options": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
@@ -1184,7 +1235,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/3.1.5": {
+      "Microsoft.Extensions.Logging.Abstractions/3.1.6": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
@@ -1193,11 +1244,11 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Options/3.1.5": {
+      "Microsoft.Extensions.Options/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.5",
-          "Microsoft.Extensions.Primitives": "3.1.5",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6",
+          "Microsoft.Extensions.Primitives": "3.1.6",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
@@ -1207,7 +1258,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.1.5": {
+      "Microsoft.Extensions.Primitives/3.1.6": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.2",
@@ -1232,12 +1283,11 @@
           "build/Microsoft.NetFramework.Analyzers.props": {}
         }
       },
-      "MimeKit/2.8.0": {
+      "MimeKit/2.9.1": {
         "type": "package",
         "dependencies": {
           "Portable.BouncyCastle": "1.8.5",
           "System.Reflection.TypeExtensions": "4.4.0",
-          "System.Security.Cryptography.Cng": "4.4.0",
           "System.Text.Encoding.CodePages": "4.4.0"
         },
         "frameworkAssemblies": [
@@ -1262,7 +1312,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Plugin.NFC/0.1.16": {
+      "Plugin.NFC/0.1.17": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Drawing.Common.dll"
@@ -1406,15 +1456,6 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.Security.Cryptography.Cng/4.4.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.0/System.Security.Cryptography.Cng.dll": {}
-        },
-        "runtime": {
-          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Cng.dll": {}
-        }
-      },
       "System.Text.Encoding.CodePages/4.5.1": {
         "type": "package",
         "compile": {
@@ -1433,6 +1474,12 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "VideoLAN.LibVLC.iOS/3.3.10": {
+        "type": "package",
+        "build": {
+          "build/VideoLAN.LibVLC.iOS.targets": {}
+        }
+      },
       "Xam.Plugin.LatestVersion/1.1.2": {
         "type": "package",
         "compile": {
@@ -1498,7 +1545,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.6.0.967": {
+      "Xamarin.Forms/4.7.0.1080": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1574,8 +1621,8 @@
           "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pl"
           },
-          "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll": {
-            "locale": "pt-br"
+          "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll": {
+            "locale": "pt-BR"
           },
           "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pt"
@@ -1619,51 +1666,52 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "ZXing.Net.Mobile/2.4.1": {
-        "type": "package",
-        "compile": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll": {},
-          "lib/Xamarin.iOS10/ZXingNetMobile.dll": {},
-          "lib/Xamarin.iOS10/zxing.portable.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll": {},
-          "lib/Xamarin.iOS10/ZXingNetMobile.dll": {},
-          "lib/Xamarin.iOS10/zxing.portable.dll": {}
-        }
-      },
-      "ZXing.Net.Mobile.Forms/2.4.1": {
+      "ZXing.Net.Mobile/3.0.0-beta5": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203",
-          "ZXing.Net.Mobile": "2.4.1"
+          "Xamarin.Essentials": "1.5.1"
         },
         "compile": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.dll": {},
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.iOS.dll": {}
+          "lib/xamarinios10/ZXingNetMobile.dll": {},
+          "lib/xamarinios10/zxing.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.dll": {},
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.iOS.dll": {}
+          "lib/xamarinios10/ZXingNetMobile.dll": {},
+          "lib/xamarinios10/zxing.dll": {}
+        }
+      },
+      "ZXing.Net.Mobile.Forms/3.0.0-beta5": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.5.1",
+          "Xamarin.Forms": "4.5.0.356",
+          "ZXing.Net.Mobile": "3.0.0-beta5"
+        },
+        "compile": {
+          "lib/xamarinios10/ZXing.Net.Mobile.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/ZXing.Net.Mobile.Forms.dll": {}
         }
       },
       "FreezeTest/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.1.0.442",
+          "Acr.UserDialogs": "7.1.0.446",
           "AiForms.SettingsView": "1.2.14-pre",
-          "MailKit": "2.7.0",
-          "Microsoft.AppCenter": "3.2.2",
-          "Microsoft.AppCenter.Analytics": "3.2.2",
-          "Microsoft.AppCenter.Crashes": "3.2.2",
+          "LibVLCSharp.Forms": "3.4.6",
+          "MailKit": "2.8.0",
+          "Microsoft.AppCenter": "3.3.0",
+          "Microsoft.AppCenter.Analytics": "3.3.0",
+          "Microsoft.AppCenter.Crashes": "3.3.0",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.CodeAnalysis.CSharp": "3.6.0",
           "Microsoft.CodeAnalysis.Common": "3.6.0",
-          "Microsoft.Extensions.DependencyInjection": "3.1.5",
-          "Microsoft.Extensions.Logging": "3.1.5",
+          "Microsoft.Extensions.DependencyInjection": "3.1.6",
+          "Microsoft.Extensions.Logging": "3.1.6",
           "Newtonsoft.Json": "12.0.3",
-          "Plugin.NFC": "0.1.16",
+          "Plugin.NFC": "0.1.17",
           "Plugin.Permissions": "6.0.1",
           "Steema.TeeChart.NET.Xamarin.Forms": "4.2020.5.28",
           "Xam.Plugin.LatestVersion": "1.1.2",
@@ -1671,9 +1719,9 @@
           "Xam.Plugin.Screenshot": "2.0.3",
           "Xam.Plugin.SimpleAudioPlayer": "1.4.0",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.6.0.967",
-          "ZXing.Net.Mobile": "2.4.1",
-          "ZXing.Net.Mobile.Forms": "2.4.1"
+          "Xamarin.Forms": "4.7.0.1080",
+          "ZXing.Net.Mobile": "3.0.0-beta5",
+          "ZXing.Net.Mobile.Forms": "3.0.0-beta5"
         },
         "compile": {
           "bin/placeholder/FreezeTest.dll": {}
@@ -1684,7 +1732,7 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
-      "Acr.UserDialogs/7.1.0.442": {
+      "Acr.UserDialogs/7.1.0.446": {
         "type": "package",
         "dependencies": {
           "BTProgressHUD": "1.3.1"
@@ -1722,10 +1770,40 @@
           "lib/xamarinios10/BTProgressHUD.dll": {}
         }
       },
-      "MailKit/2.7.0": {
+      "LibVLCSharp/3.4.6": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/LibVLCSharp.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/LibVLCSharp.dll": {}
+        }
+      },
+      "LibVLCSharp.Forms/3.4.6": {
         "type": "package",
         "dependencies": {
-          "MimeKit": "2.8.0",
+          "LibVLCSharp": "3.4.6",
+          "Xamarin.Forms": "3.2.0.871581"
+        },
+        "compile": {
+          "lib/xamarinios10/LibVLCSharp.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/LibVLCSharp.Forms.dll": {}
+        },
+        "resource": {
+          "lib/xamarinios10/fr/LibVLCSharp.Forms.resources.dll": {
+            "locale": "fr"
+          }
+        }
+      },
+      "MailKit/2.8.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "2.9.1",
           "System.Net.NameResolution": "4.3.0",
           "System.Net.Security": "4.3.2",
           "System.Runtime.Serialization.Primitives": "4.3.0"
@@ -1743,7 +1821,7 @@
           "lib/netstandard2.0/MailKit.dll": {}
         }
       },
-      "Microsoft.AppCenter/3.2.2": {
+      "Microsoft.AppCenter/3.3.0": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.dll": {},
@@ -1754,10 +1832,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/3.2.2": {
+      "Microsoft.AppCenter.Analytics/3.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.2"
+          "Microsoft.AppCenter": "3.3.0"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll": {},
@@ -1768,10 +1846,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/3.2.2": {
+      "Microsoft.AppCenter.Crashes/3.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.2"
+          "Microsoft.AppCenter": "3.3.0"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll": {},
@@ -1937,10 +2015,10 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Microsoft.Extensions.Configuration/3.1.5": {
+      "Microsoft.Extensions.Configuration/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "3.1.5"
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
@@ -1949,10 +2027,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/3.1.5": {
+      "Microsoft.Extensions.Configuration.Abstractions/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.5"
+          "Microsoft.Extensions.Primitives": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -1961,10 +2039,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/3.1.5": {
+      "Microsoft.Extensions.Configuration.Binder/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration": "3.1.5"
+          "Microsoft.Extensions.Configuration": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
@@ -1973,10 +2051,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.5": {
+      "Microsoft.Extensions.DependencyInjection/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.5"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
@@ -1985,7 +2063,7 @@
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.5": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -1994,13 +2072,13 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging/3.1.5": {
+      "Microsoft.Extensions.Logging/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Binder": "3.1.5",
-          "Microsoft.Extensions.DependencyInjection": "3.1.5",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.5",
-          "Microsoft.Extensions.Options": "3.1.5"
+          "Microsoft.Extensions.Configuration.Binder": "3.1.6",
+          "Microsoft.Extensions.DependencyInjection": "3.1.6",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.6",
+          "Microsoft.Extensions.Options": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
@@ -2009,7 +2087,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/3.1.5": {
+      "Microsoft.Extensions.Logging.Abstractions/3.1.6": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
@@ -2018,11 +2096,11 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Options/3.1.5": {
+      "Microsoft.Extensions.Options/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.5",
-          "Microsoft.Extensions.Primitives": "3.1.5",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6",
+          "Microsoft.Extensions.Primitives": "3.1.6",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
@@ -2032,7 +2110,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.1.5": {
+      "Microsoft.Extensions.Primitives/3.1.6": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.2",
@@ -2057,12 +2135,11 @@
           "build/Microsoft.NetFramework.Analyzers.props": {}
         }
       },
-      "MimeKit/2.8.0": {
+      "MimeKit/2.9.1": {
         "type": "package",
         "dependencies": {
           "Portable.BouncyCastle": "1.8.5",
           "System.Reflection.TypeExtensions": "4.4.0",
-          "System.Security.Cryptography.Cng": "4.4.0",
           "System.Text.Encoding.CodePages": "4.4.0"
         },
         "frameworkAssemblies": [
@@ -2087,7 +2164,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Plugin.NFC/0.1.16": {
+      "Plugin.NFC/0.1.17": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Drawing.Common.dll"
@@ -2231,15 +2308,6 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.Security.Cryptography.Cng/4.4.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.0/System.Security.Cryptography.Cng.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Security.Cryptography.Cng.dll": {}
-        }
-      },
       "System.Text.Encoding.CodePages/4.5.1": {
         "type": "package",
         "compile": {
@@ -2256,6 +2324,12 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "VideoLAN.LibVLC.iOS/3.3.10": {
+        "type": "package",
+        "build": {
+          "build/VideoLAN.LibVLC.iOS.targets": {}
         }
       },
       "Xam.Plugin.LatestVersion/1.1.2": {
@@ -2323,7 +2397,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.6.0.967": {
+      "Xamarin.Forms/4.7.0.1080": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -2399,8 +2473,8 @@
           "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pl"
           },
-          "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll": {
-            "locale": "pt-br"
+          "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll": {
+            "locale": "pt-BR"
           },
           "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pt"
@@ -2444,51 +2518,52 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "ZXing.Net.Mobile/2.4.1": {
-        "type": "package",
-        "compile": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll": {},
-          "lib/Xamarin.iOS10/ZXingNetMobile.dll": {},
-          "lib/Xamarin.iOS10/zxing.portable.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll": {},
-          "lib/Xamarin.iOS10/ZXingNetMobile.dll": {},
-          "lib/Xamarin.iOS10/zxing.portable.dll": {}
-        }
-      },
-      "ZXing.Net.Mobile.Forms/2.4.1": {
+      "ZXing.Net.Mobile/3.0.0-beta5": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203",
-          "ZXing.Net.Mobile": "2.4.1"
+          "Xamarin.Essentials": "1.5.1"
         },
         "compile": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.dll": {},
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.iOS.dll": {}
+          "lib/xamarinios10/ZXingNetMobile.dll": {},
+          "lib/xamarinios10/zxing.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.dll": {},
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.iOS.dll": {}
+          "lib/xamarinios10/ZXingNetMobile.dll": {},
+          "lib/xamarinios10/zxing.dll": {}
+        }
+      },
+      "ZXing.Net.Mobile.Forms/3.0.0-beta5": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.5.1",
+          "Xamarin.Forms": "4.5.0.356",
+          "ZXing.Net.Mobile": "3.0.0-beta5"
+        },
+        "compile": {
+          "lib/xamarinios10/ZXing.Net.Mobile.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/ZXing.Net.Mobile.Forms.dll": {}
         }
       },
       "FreezeTest/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.1.0.442",
+          "Acr.UserDialogs": "7.1.0.446",
           "AiForms.SettingsView": "1.2.14-pre",
-          "MailKit": "2.7.0",
-          "Microsoft.AppCenter": "3.2.2",
-          "Microsoft.AppCenter.Analytics": "3.2.2",
-          "Microsoft.AppCenter.Crashes": "3.2.2",
+          "LibVLCSharp.Forms": "3.4.6",
+          "MailKit": "2.8.0",
+          "Microsoft.AppCenter": "3.3.0",
+          "Microsoft.AppCenter.Analytics": "3.3.0",
+          "Microsoft.AppCenter.Crashes": "3.3.0",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.CodeAnalysis.CSharp": "3.6.0",
           "Microsoft.CodeAnalysis.Common": "3.6.0",
-          "Microsoft.Extensions.DependencyInjection": "3.1.5",
-          "Microsoft.Extensions.Logging": "3.1.5",
+          "Microsoft.Extensions.DependencyInjection": "3.1.6",
+          "Microsoft.Extensions.Logging": "3.1.6",
           "Newtonsoft.Json": "12.0.3",
-          "Plugin.NFC": "0.1.16",
+          "Plugin.NFC": "0.1.17",
           "Plugin.Permissions": "6.0.1",
           "Steema.TeeChart.NET.Xamarin.Forms": "4.2020.5.28",
           "Xam.Plugin.LatestVersion": "1.1.2",
@@ -2496,9 +2571,9 @@
           "Xam.Plugin.Screenshot": "2.0.3",
           "Xam.Plugin.SimpleAudioPlayer": "1.4.0",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.6.0.967",
-          "ZXing.Net.Mobile": "2.4.1",
-          "ZXing.Net.Mobile.Forms": "2.4.1"
+          "Xamarin.Forms": "4.7.0.1080",
+          "ZXing.Net.Mobile": "3.0.0-beta5",
+          "ZXing.Net.Mobile.Forms": "3.0.0-beta5"
         },
         "compile": {
           "bin/placeholder/FreezeTest.dll": {}
@@ -2509,7 +2584,7 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
-      "Acr.UserDialogs/7.1.0.442": {
+      "Acr.UserDialogs/7.1.0.446": {
         "type": "package",
         "dependencies": {
           "BTProgressHUD": "1.3.1"
@@ -2547,10 +2622,40 @@
           "lib/xamarinios10/BTProgressHUD.dll": {}
         }
       },
-      "MailKit/2.7.0": {
+      "LibVLCSharp/3.4.6": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/LibVLCSharp.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/LibVLCSharp.dll": {}
+        }
+      },
+      "LibVLCSharp.Forms/3.4.6": {
         "type": "package",
         "dependencies": {
-          "MimeKit": "2.8.0",
+          "LibVLCSharp": "3.4.6",
+          "Xamarin.Forms": "3.2.0.871581"
+        },
+        "compile": {
+          "lib/xamarinios10/LibVLCSharp.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/LibVLCSharp.Forms.dll": {}
+        },
+        "resource": {
+          "lib/xamarinios10/fr/LibVLCSharp.Forms.resources.dll": {
+            "locale": "fr"
+          }
+        }
+      },
+      "MailKit/2.8.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "2.9.1",
           "System.Net.NameResolution": "4.3.0",
           "System.Net.Security": "4.3.2",
           "System.Runtime.Serialization.Primitives": "4.3.0"
@@ -2568,7 +2673,7 @@
           "lib/netstandard2.0/MailKit.dll": {}
         }
       },
-      "Microsoft.AppCenter/3.2.2": {
+      "Microsoft.AppCenter/3.3.0": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.dll": {},
@@ -2579,10 +2684,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/3.2.2": {
+      "Microsoft.AppCenter.Analytics/3.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.2"
+          "Microsoft.AppCenter": "3.3.0"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll": {},
@@ -2593,10 +2698,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/3.2.2": {
+      "Microsoft.AppCenter.Crashes/3.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.2"
+          "Microsoft.AppCenter": "3.3.0"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll": {},
@@ -2762,10 +2867,10 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Microsoft.Extensions.Configuration/3.1.5": {
+      "Microsoft.Extensions.Configuration/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "3.1.5"
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
@@ -2774,10 +2879,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/3.1.5": {
+      "Microsoft.Extensions.Configuration.Abstractions/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.5"
+          "Microsoft.Extensions.Primitives": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -2786,10 +2891,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/3.1.5": {
+      "Microsoft.Extensions.Configuration.Binder/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration": "3.1.5"
+          "Microsoft.Extensions.Configuration": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
@@ -2798,10 +2903,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.5": {
+      "Microsoft.Extensions.DependencyInjection/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.5"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
@@ -2810,7 +2915,7 @@
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.5": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -2819,13 +2924,13 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging/3.1.5": {
+      "Microsoft.Extensions.Logging/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Binder": "3.1.5",
-          "Microsoft.Extensions.DependencyInjection": "3.1.5",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.5",
-          "Microsoft.Extensions.Options": "3.1.5"
+          "Microsoft.Extensions.Configuration.Binder": "3.1.6",
+          "Microsoft.Extensions.DependencyInjection": "3.1.6",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.6",
+          "Microsoft.Extensions.Options": "3.1.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
@@ -2834,7 +2939,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/3.1.5": {
+      "Microsoft.Extensions.Logging.Abstractions/3.1.6": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
@@ -2843,11 +2948,11 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Options/3.1.5": {
+      "Microsoft.Extensions.Options/3.1.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.5",
-          "Microsoft.Extensions.Primitives": "3.1.5",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6",
+          "Microsoft.Extensions.Primitives": "3.1.6",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
@@ -2857,7 +2962,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.1.5": {
+      "Microsoft.Extensions.Primitives/3.1.6": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.2",
@@ -2882,12 +2987,11 @@
           "build/Microsoft.NetFramework.Analyzers.props": {}
         }
       },
-      "MimeKit/2.8.0": {
+      "MimeKit/2.9.1": {
         "type": "package",
         "dependencies": {
           "Portable.BouncyCastle": "1.8.5",
           "System.Reflection.TypeExtensions": "4.4.0",
-          "System.Security.Cryptography.Cng": "4.4.0",
           "System.Text.Encoding.CodePages": "4.4.0"
         },
         "frameworkAssemblies": [
@@ -2912,7 +3016,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Plugin.NFC/0.1.16": {
+      "Plugin.NFC/0.1.17": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Drawing.Common.dll"
@@ -3056,15 +3160,6 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.Security.Cryptography.Cng/4.4.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.0/System.Security.Cryptography.Cng.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Security.Cryptography.Cng.dll": {}
-        }
-      },
       "System.Text.Encoding.CodePages/4.5.1": {
         "type": "package",
         "compile": {
@@ -3081,6 +3176,12 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "VideoLAN.LibVLC.iOS/3.3.10": {
+        "type": "package",
+        "build": {
+          "build/VideoLAN.LibVLC.iOS.targets": {}
         }
       },
       "Xam.Plugin.LatestVersion/1.1.2": {
@@ -3148,7 +3249,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.6.0.967": {
+      "Xamarin.Forms/4.7.0.1080": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -3224,8 +3325,8 @@
           "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pl"
           },
-          "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll": {
-            "locale": "pt-br"
+          "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll": {
+            "locale": "pt-BR"
           },
           "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pt"
@@ -3269,51 +3370,52 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "ZXing.Net.Mobile/2.4.1": {
-        "type": "package",
-        "compile": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll": {},
-          "lib/Xamarin.iOS10/ZXingNetMobile.dll": {},
-          "lib/Xamarin.iOS10/zxing.portable.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll": {},
-          "lib/Xamarin.iOS10/ZXingNetMobile.dll": {},
-          "lib/Xamarin.iOS10/zxing.portable.dll": {}
-        }
-      },
-      "ZXing.Net.Mobile.Forms/2.4.1": {
+      "ZXing.Net.Mobile/3.0.0-beta5": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203",
-          "ZXing.Net.Mobile": "2.4.1"
+          "Xamarin.Essentials": "1.5.1"
         },
         "compile": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.dll": {},
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.iOS.dll": {}
+          "lib/xamarinios10/ZXingNetMobile.dll": {},
+          "lib/xamarinios10/zxing.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.dll": {},
-          "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.iOS.dll": {}
+          "lib/xamarinios10/ZXingNetMobile.dll": {},
+          "lib/xamarinios10/zxing.dll": {}
+        }
+      },
+      "ZXing.Net.Mobile.Forms/3.0.0-beta5": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.5.1",
+          "Xamarin.Forms": "4.5.0.356",
+          "ZXing.Net.Mobile": "3.0.0-beta5"
+        },
+        "compile": {
+          "lib/xamarinios10/ZXing.Net.Mobile.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/ZXing.Net.Mobile.Forms.dll": {}
         }
       },
       "FreezeTest/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.1.0.442",
+          "Acr.UserDialogs": "7.1.0.446",
           "AiForms.SettingsView": "1.2.14-pre",
-          "MailKit": "2.7.0",
-          "Microsoft.AppCenter": "3.2.2",
-          "Microsoft.AppCenter.Analytics": "3.2.2",
-          "Microsoft.AppCenter.Crashes": "3.2.2",
+          "LibVLCSharp.Forms": "3.4.6",
+          "MailKit": "2.8.0",
+          "Microsoft.AppCenter": "3.3.0",
+          "Microsoft.AppCenter.Analytics": "3.3.0",
+          "Microsoft.AppCenter.Crashes": "3.3.0",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.CodeAnalysis.CSharp": "3.6.0",
           "Microsoft.CodeAnalysis.Common": "3.6.0",
-          "Microsoft.Extensions.DependencyInjection": "3.1.5",
-          "Microsoft.Extensions.Logging": "3.1.5",
+          "Microsoft.Extensions.DependencyInjection": "3.1.6",
+          "Microsoft.Extensions.Logging": "3.1.6",
           "Newtonsoft.Json": "12.0.3",
-          "Plugin.NFC": "0.1.16",
+          "Plugin.NFC": "0.1.17",
           "Plugin.Permissions": "6.0.1",
           "Steema.TeeChart.NET.Xamarin.Forms": "4.2020.5.28",
           "Xam.Plugin.LatestVersion": "1.1.2",
@@ -3321,9 +3423,9 @@
           "Xam.Plugin.Screenshot": "2.0.3",
           "Xam.Plugin.SimpleAudioPlayer": "1.4.0",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.6.0.967",
-          "ZXing.Net.Mobile": "2.4.1",
-          "ZXing.Net.Mobile.Forms": "2.4.1"
+          "Xamarin.Forms": "4.7.0.1080",
+          "ZXing.Net.Mobile": "3.0.0-beta5",
+          "ZXing.Net.Mobile.Forms": "3.0.0-beta5"
         },
         "compile": {
           "bin/placeholder/FreezeTest.dll": {}
@@ -3335,20 +3437,19 @@
     }
   },
   "libraries": {
-    "Acr.UserDialogs/7.1.0.442": {
-      "sha512": "4z+sp3nTkFZuY75gd4zo2+86S8eaWlHl7KhLs/EAG9TH7Ng9+a4jfOap8v3fq1RXrF3gVae2ycLPcndZptxHZQ==",
+    "Acr.UserDialogs/7.1.0.446": {
+      "sha512": "7YF7hk4qy4x9pKrVzKnjTEvua+kTSlHqdPPvP4gIqsxymPH6I3nAW2lpSo8kX97nTBbwkfddtrikwAXIYxRNIw==",
       "type": "package",
-      "path": "acr.userdialogs/7.1.0.442",
+      "path": "acr.userdialogs/7.1.0.446",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "acr.userdialogs.7.1.0.442.nupkg.sha512",
+        "acr.userdialogs.7.1.0.446.nupkg.sha512",
         "acr.userdialogs.nuspec",
         "lib/monoandroid10.0/Acr.UserDialogs.dll",
         "lib/monoandroid10.0/Acr.UserDialogs.pdb",
         "lib/monoandroid10.0/Acr.UserDialogs.xml",
         "lib/monoandroid90/Acr.UserDialogs.dll",
-        "lib/monoandroid90/Acr.UserDialogs.dll.mdb",
         "lib/monoandroid90/Acr.UserDialogs.pdb",
         "lib/monoandroid90/Acr.UserDialogs.xml",
         "lib/netstandard2.0/Acr.UserDialogs.dll",
@@ -3421,10 +3522,75 @@
         "lib/xamarinios10/BTProgressHUD.xml"
       ]
     },
-    "MailKit/2.7.0": {
-      "sha512": "AaUb45NBpKSjl1bTOAwB7nGQm2cLg6yjz4L+2KgU9dhTN3VTmXnJo+enKTjN0LHX3PV4k7DE12IhZqmXnP3v6w==",
+    "LibVLCSharp/3.4.6": {
+      "sha512": "lr55WPizbXnMLZwZZwSoFNrEzsaJ2nh6KtSbnwfJAT0zOizuFuMK7JcsGEQacNkr/HWfVj3bbLVxHMZbuQgdjg==",
       "type": "package",
-      "path": "mailkit/2.7.0",
+      "path": "libvlcsharp/3.4.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/monoandroid81/LibVLCSharp.Android.AWindow.dll",
+        "lib/monoandroid81/LibVLCSharp.dll",
+        "lib/monoandroid81/LibVLCSharp.xml",
+        "lib/net40/LibVLCSharp.dll",
+        "lib/net40/LibVLCSharp.xml",
+        "lib/net471/LibVLCSharp.dll",
+        "lib/net471/LibVLCSharp.xml",
+        "lib/netstandard1.1/LibVLCSharp.dll",
+        "lib/netstandard1.1/LibVLCSharp.xml",
+        "lib/netstandard2.0/LibVLCSharp.dll",
+        "lib/netstandard2.0/LibVLCSharp.xml",
+        "lib/netstandard2.1/LibVLCSharp.dll",
+        "lib/netstandard2.1/LibVLCSharp.xml",
+        "lib/uap10.0.16299/LibVLCSharp.dll",
+        "lib/uap10.0.16299/LibVLCSharp.pri",
+        "lib/uap10.0.16299/LibVLCSharp.xml",
+        "lib/uap10.0.16299/LibVLCSharp/LibVLCSharp.xr.xml",
+        "lib/uap10.0.16299/LibVLCSharp/Themes/Generic.xaml",
+        "lib/uap10.0/LibVLCSharp.dll",
+        "lib/uap10.0/LibVLCSharp.pri",
+        "lib/uap10.0/LibVLCSharp.xml",
+        "lib/uap10.0/LibVLCSharp/LibVLCSharp.xr.xml",
+        "lib/uap10.0/LibVLCSharp/Themes/Generic.xaml",
+        "lib/xamarinios10/LibVLCSharp.dll",
+        "lib/xamarinios10/LibVLCSharp.xml",
+        "lib/xamarinmac20/LibVLCSharp.dll",
+        "lib/xamarinmac20/LibVLCSharp.xml",
+        "lib/xamarintvos10/LibVLCSharp.dll",
+        "lib/xamarintvos10/LibVLCSharp.xml",
+        "libvlcsharp.3.4.6.nupkg.sha512",
+        "libvlcsharp.nuspec"
+      ]
+    },
+    "LibVLCSharp.Forms/3.4.6": {
+      "sha512": "x5bRUxMcjQ1y5bQjWcmJI2hy9zyGl71YOGzNFahzTHnrVfugkCBLmHPJiI0jGeUSqQiFX9vhUPv874cAzvXkKg==",
+      "type": "package",
+      "path": "libvlcsharp.forms/3.4.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/monoandroid81/LibVLCSharp.Forms.dll",
+        "lib/monoandroid81/LibVLCSharp.Forms.xml",
+        "lib/monoandroid81/fr/LibVLCSharp.Forms.resources.dll",
+        "lib/netstandard2.0/LibVLCSharp.Forms.dll",
+        "lib/netstandard2.0/LibVLCSharp.Forms.xml",
+        "lib/netstandard2.0/fr/LibVLCSharp.Forms.resources.dll",
+        "lib/xamarinios10/LibVLCSharp.Forms.dll",
+        "lib/xamarinios10/LibVLCSharp.Forms.xml",
+        "lib/xamarinios10/fr/LibVLCSharp.Forms.resources.dll",
+        "lib/xamarinmac20/LibVLCSharp.Forms.dll",
+        "lib/xamarinmac20/LibVLCSharp.Forms.xml",
+        "lib/xamarinmac20/fr/LibVLCSharp.Forms.resources.dll",
+        "libvlcsharp.forms.3.4.6.nupkg.sha512",
+        "libvlcsharp.forms.nuspec"
+      ]
+    },
+    "MailKit/2.8.0": {
+      "sha512": "oAbRyAfzymGSxOZRyDAeYwjZubWgj9b9e2CUp2bzMDMQ/2DRdvWkzSXIuVxLpR6QKA5MMixYkowyo1RSV16Atw==",
+      "type": "package",
+      "path": "mailkit/2.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3450,14 +3616,14 @@
         "lib/netstandard2.0/MailKit.dll",
         "lib/netstandard2.0/MailKit.pdb",
         "lib/netstandard2.0/MailKit.xml",
-        "mailkit.2.7.0.nupkg.sha512",
+        "mailkit.2.8.0.nupkg.sha512",
         "mailkit.nuspec"
       ]
     },
-    "Microsoft.AppCenter/3.2.2": {
-      "sha512": "qmpnmCQnNKx8a4xRtDEj7T6MOPPC9fnMfYmxDdMMKDEl4cUxwBp0RrUTuKzatfSo6txKbCRrBlrcPfUmNcOvkA==",
+    "Microsoft.AppCenter/3.3.0": {
+      "sha512": "IVcnOfoFUibczOoWFr9Z4vyWyf0wWpOUoj41CVC4j6WVMGVAKC3l6Byu8x8yquOdOAVcLhPyqL0fyXgdS5RcHA==",
       "type": "package",
-      "path": "microsoft.appcenter/3.2.2",
+      "path": "microsoft.appcenter/3.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3475,14 +3641,14 @@
         "lib/netstandard1.0/Microsoft.AppCenter.xml",
         "lib/uap10.0/Microsoft.AppCenter.dll",
         "lib/uap10.0/Microsoft.AppCenter.xml",
-        "microsoft.appcenter.3.2.2.nupkg.sha512",
+        "microsoft.appcenter.3.3.0.nupkg.sha512",
         "microsoft.appcenter.nuspec"
       ]
     },
-    "Microsoft.AppCenter.Analytics/3.2.2": {
-      "sha512": "+HMUgzHkD9TdWc5gChc5lj7gFluTbzGQn5mwdsWSMS4AXi3HK4Axj9HSYt1M9jFW/dK/PKxY9ysCDOk4AnxMLA==",
+    "Microsoft.AppCenter.Analytics/3.3.0": {
+      "sha512": "4GUx7AF2zXOx5XhpRNd6bcHMFCpxUP4JqmN45rZr6I6r72G3JMWGk3Tra9beJV3G+oMuhYGRUyGE+o84KnXXuA==",
       "type": "package",
-      "path": "microsoft.appcenter.analytics/3.2.2",
+      "path": "microsoft.appcenter.analytics/3.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3500,14 +3666,14 @@
         "lib/netstandard1.0/Microsoft.AppCenter.Analytics.xml",
         "lib/uap10.0/Microsoft.AppCenter.Analytics.dll",
         "lib/uap10.0/Microsoft.AppCenter.Analytics.xml",
-        "microsoft.appcenter.analytics.3.2.2.nupkg.sha512",
+        "microsoft.appcenter.analytics.3.3.0.nupkg.sha512",
         "microsoft.appcenter.analytics.nuspec"
       ]
     },
-    "Microsoft.AppCenter.Crashes/3.2.2": {
-      "sha512": "OcRqm6vzuV0rUj9xE6qa/jHFJn0qin26o9R+11hDl7Lh/IQxzm5ReNVRNkOTK3W8Y6bdiDXDwBHfdFQlvbserg==",
+    "Microsoft.AppCenter.Crashes/3.3.0": {
+      "sha512": "3fTBBK9I3hQInXNb3n4IyaZ70mGwEWfdF+Zkwz4eLzk+iV2RYT/+U+v8HQfwHvplUBy8x3AAQ7h7SFIzX7vGxw==",
       "type": "package",
-      "path": "microsoft.appcenter.crashes/3.2.2",
+      "path": "microsoft.appcenter.crashes/3.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3525,7 +3691,7 @@
         "lib/netstandard1.0/Microsoft.AppCenter.Crashes.xml",
         "lib/uap10.0/Microsoft.AppCenter.Crashes.dll",
         "lib/uap10.0/Microsoft.AppCenter.Crashes.xml",
-        "microsoft.appcenter.crashes.3.2.2.nupkg.sha512",
+        "microsoft.appcenter.crashes.3.3.0.nupkg.sha512",
         "microsoft.appcenter.crashes.nuspec"
       ]
     },
@@ -4022,10 +4188,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.Extensions.Configuration/3.1.5": {
-      "sha512": "LZfdAP8flK4hkaniUv6TlstDX9FXLmJMX1A4mpLghAsZxTaJIgf+nzBNiPRdy/B5Vrs74gRONX3JrIUJQrebmA==",
+    "Microsoft.Extensions.Configuration/3.1.6": {
+      "sha512": "gphCAywKC+ye1XdL+8Nv2Pd5b1Fn2yx7DekB4GQPCKaPyK94T9Tb+Sfk/iNdaDKtDl4vwidMI0w2AnoXtvofsw==",
       "type": "package",
-      "path": "microsoft.extensions.configuration/3.1.5",
+      "path": "microsoft.extensions.configuration/3.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4034,14 +4200,14 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.xml",
-        "microsoft.extensions.configuration.3.1.5.nupkg.sha512",
+        "microsoft.extensions.configuration.3.1.6.nupkg.sha512",
         "microsoft.extensions.configuration.nuspec"
       ]
     },
-    "Microsoft.Extensions.Configuration.Abstractions/3.1.5": {
-      "sha512": "VBcAk6s9izZr04WCzNqOh1Sxz2RbVSh0G79MfpHSDv16cUJtSEYEHody9ZnF71LBEktzdu6cvDFBOFMh43q0iA==",
+    "Microsoft.Extensions.Configuration.Abstractions/3.1.6": {
+      "sha512": "Z7QAA7XFvYuGZCKsfzetdIq0Vj1ngiIzCBBqerlQMhewx1ZFLXHuvKx9xAIWeZqhuQv69VmFs3vO0Af9FDAa9Q==",
       "type": "package",
-      "path": "microsoft.extensions.configuration.abstractions/3.1.5",
+      "path": "microsoft.extensions.configuration.abstractions/3.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4050,14 +4216,14 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
-        "microsoft.extensions.configuration.abstractions.3.1.5.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.3.1.6.nupkg.sha512",
         "microsoft.extensions.configuration.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.Configuration.Binder/3.1.5": {
-      "sha512": "ZR/zjBxkvdnnWhRoBHDT95uz1ZgJFhv1QazmKCIcDqy/RXqi+6dJ/PfxDhEnzPvk9HbkcGfFsPEu1vSIyxDqBQ==",
+    "Microsoft.Extensions.Configuration.Binder/3.1.6": {
+      "sha512": "ZEEuo0TEQE+a/+l4EB/KdsjVt9bIee37c74C7Q+lLiP6WiPuBytP4EmxPYwrTB/oQX8sm9W3KvVGE5WW6oaNPg==",
       "type": "package",
-      "path": "microsoft.extensions.configuration.binder/3.1.5",
+      "path": "microsoft.extensions.configuration.binder/3.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4066,14 +4232,14 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
-        "microsoft.extensions.configuration.binder.3.1.5.nupkg.sha512",
+        "microsoft.extensions.configuration.binder.3.1.6.nupkg.sha512",
         "microsoft.extensions.configuration.binder.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection/3.1.5": {
-      "sha512": "I+RTJQi7TtenIHZqL2zr6523PYXfL88Ruu4UIVmspIxdw14GHd8zZ+2dGLSdwX7fn41Hth4d42S1e1iHWVOJyQ==",
+    "Microsoft.Extensions.DependencyInjection/3.1.6": {
+      "sha512": "YMJWflBmBc0PbqYvt3m4ueSCgV51JLfqHhyunoVq0rBs9V4sVQw5JsPTB17bIrlHFJs2pt2olgfavOOvuGwoRg==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection/3.1.5",
+      "path": "microsoft.extensions.dependencyinjection/3.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4086,28 +4252,28 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
-        "microsoft.extensions.dependencyinjection.3.1.5.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.3.1.6.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.5": {
-      "sha512": "2VSCj2TZPMdeEi279Lawi6qJQu4+sEWizSOYrhY6hapyS1jxn1jVUZT1Ugv68bya+x8+3lD4+RqhUZql9PhISQ==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
+      "sha512": "JVlypPjlPqOEyAhET6pA7TqrK+Ya8TrYe2vvqsp62TYKS87oNuReoS7XpDFW0rrOsQo66G1yYf3K0E+lJHFHuw==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.5",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.3.1.5.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.Logging/3.1.5": {
-      "sha512": "C85NYDym6xy03o70vxX+VQ4ZEjj5Eg5t5QoGW0t100vG5MmPL6+G3XXcQjIIn1WRQrjzGWzQwuKf38fxXEWIWA==",
+    "Microsoft.Extensions.Logging/3.1.6": {
+      "sha512": "qZH7iTdJn+kS/DWzQgQWMGMHBv+SqzuJB14G9tKAR2w3b6Wzn4ClAK3LGsc2l/cwBW3At1OJT/jBAal4Qm5Rjw==",
       "type": "package",
-      "path": "microsoft.extensions.logging/3.1.5",
+      "path": "microsoft.extensions.logging/3.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4116,28 +4282,28 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Logging.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.xml",
-        "microsoft.extensions.logging.3.1.5.nupkg.sha512",
+        "microsoft.extensions.logging.3.1.6.nupkg.sha512",
         "microsoft.extensions.logging.nuspec"
       ]
     },
-    "Microsoft.Extensions.Logging.Abstractions/3.1.5": {
-      "sha512": "ZvwowjRSWXewdPI+whPFXgwF4Qme6Q9KV9SCPEITSGiqHLArct7q5hTBtTzj3GPsVLjTqehvTg6Bd/EQk9JS0A==",
+    "Microsoft.Extensions.Logging.Abstractions/3.1.6": {
+      "sha512": "o2XYIjF9UugupEPvFsc9N8SjevixoRznS0V6EtjUZcGV4EjXXWKUXlKKsIWmD3i4dSiGo82aNcyqfQTsF/8h8g==",
       "type": "package",
-      "path": "microsoft.extensions.logging.abstractions/3.1.5",
+      "path": "microsoft.extensions.logging.abstractions/3.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "microsoft.extensions.logging.abstractions.3.1.5.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.3.1.6.nupkg.sha512",
         "microsoft.extensions.logging.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.Options/3.1.5": {
-      "sha512": "f+JT/7lkKBMp/Ak2tVjO+TD7o+UoCfjnExkZNn0PZIso8kIXrqNy6x42Lrxf4Q0pW3JMf9ExmL2EQlvk2XnFAg==",
+    "Microsoft.Extensions.Options/3.1.6": {
+      "sha512": "6nBkdL9UxCfA8eDuFBZVYAYpJhux0a6R7y58KcYnqKEYF84X9cK1uJQ9a+VWEWGXujMa4fnCGoVdKNYhANqbZg==",
       "type": "package",
-      "path": "microsoft.extensions.options/3.1.5",
+      "path": "microsoft.extensions.options/3.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4146,14 +4312,14 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Options.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Options.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
-        "microsoft.extensions.options.3.1.5.nupkg.sha512",
+        "microsoft.extensions.options.3.1.6.nupkg.sha512",
         "microsoft.extensions.options.nuspec"
       ]
     },
-    "Microsoft.Extensions.Primitives/3.1.5": {
-      "sha512": "6bLdjSAQix82oP2tsuX9MM2yjgUFFOkSZYyRSKoUULilw2cg0Y0H+dnugwYlfj8Jd7yjd/+QSdNBqEyYhTYv0w==",
+    "Microsoft.Extensions.Primitives/3.1.6": {
+      "sha512": "X+h3tO383iMbtFxYp6Al4pgBzbfQKJY8/gd4U7+sZy90XeSfnw5SwHyCiRrAePG6kee4zCGsvQHPCqaTZ876hw==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/3.1.5",
+      "path": "microsoft.extensions.primitives/3.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4162,7 +4328,7 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.3.1.5.nupkg.sha512",
+        "microsoft.extensions.primitives.3.1.6.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec"
       ]
     },
@@ -4326,10 +4492,10 @@
         "tools/uninstall.ps1"
       ]
     },
-    "MimeKit/2.8.0": {
-      "sha512": "XUWdwag5dcdwJAzMpBLNx+24xgpigk/bhIJBs/sITciX8CIYS2cfc4VkGwQjtuTsrbaJEBl3ZSOtGSOOc2k/pg==",
+    "MimeKit/2.9.1": {
+      "sha512": "0XUFf9DEZiLROC7cWvCOqn2uXekNIWztZdpBsaJcvPrndqWpap32jLgQ2kribNj+rhRqK8vpDy9Uvg714v6KBg==",
       "type": "package",
-      "path": "mimekit/2.8.0",
+      "path": "mimekit/2.9.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4355,7 +4521,7 @@
         "lib/netstandard2.0/MimeKit.dll",
         "lib/netstandard2.0/MimeKit.pdb",
         "lib/netstandard2.0/MimeKit.xml",
-        "mimekit.2.8.0.nupkg.sha512",
+        "mimekit.2.9.1.nupkg.sha512",
         "mimekit.nuspec"
       ]
     },
@@ -4390,13 +4556,14 @@
         "packageIcon.png"
       ]
     },
-    "Plugin.NFC/0.1.16": {
-      "sha512": "hKCYiYNkSY1A6C0fa93tooCus4bBsoEzvV0jWIua+Nh43ZnqI3aq/QMvQzZwpbfpy6KV+q3sG4HKrKrlPlSn4A==",
+    "Plugin.NFC/0.1.17": {
+      "sha512": "hh/YRdxhQDH5GXYkEwIPPt9Czmyopn1R3D5PcpFpJqDbMgjcLae4oy2SKThpTKbsy8yDhXQq+UXeQPlFcIstag==",
       "type": "package",
-      "path": "plugin.nfc/0.1.16",
+      "path": "plugin.nfc/0.1.17",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "icon.png",
         "lib/monoandroid81/Plugin.NFC.dll",
         "lib/monoandroid90/Plugin.NFC.dll",
         "lib/netstandard1.0/Plugin.NFC.dll",
@@ -4404,7 +4571,7 @@
         "lib/uap10.0.16299/Plugin.NFC.dll",
         "lib/uap10.0.16299/Plugin.NFC.pri",
         "lib/xamarinios10/Plugin.NFC.dll",
-        "plugin.nfc.0.1.16.nupkg.sha512",
+        "plugin.nfc.0.1.17.nupkg.sha512",
         "plugin.nfc.nuspec"
       ]
     },
@@ -4904,50 +5071,6 @@
         "system.runtime.serialization.primitives.nuspec"
       ]
     },
-    "System.Security.Cryptography.Cng/4.4.0": {
-      "sha512": "3d/d+7sdNpfYfqJFzuE/o6Pl/reaMbH7rlUMNvtm4+XVYHY32tdFa45yjB3vhb6q0YY+IV8GUuiBPRsBFP3yaw==",
-      "type": "package",
-      "path": "system.security.cryptography.cng/4.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/System.Security.Cryptography.Cng.dll",
-        "lib/net461/System.Security.Cryptography.Cng.dll",
-        "lib/net462/System.Security.Cryptography.Cng.dll",
-        "lib/net47/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard1.3/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard1.4/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard2.0/System.Security.Cryptography.Cng.dll",
-        "ref/net46/System.Security.Cryptography.Cng.dll",
-        "ref/net461/System.Security.Cryptography.Cng.dll",
-        "ref/net461/System.Security.Cryptography.Cng.xml",
-        "ref/net462/System.Security.Cryptography.Cng.dll",
-        "ref/net462/System.Security.Cryptography.Cng.xml",
-        "ref/net47/System.Security.Cryptography.Cng.dll",
-        "ref/net47/System.Security.Cryptography.Cng.xml",
-        "ref/netcoreapp2.0/System.Security.Cryptography.Cng.dll",
-        "ref/netcoreapp2.0/System.Security.Cryptography.Cng.xml",
-        "ref/netstandard1.3/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard1.4/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard1.6/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard2.0/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard2.0/System.Security.Cryptography.Cng.xml",
-        "runtimes/win/lib/net46/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net461/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net462/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net47/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netstandard1.4/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
-        "system.security.cryptography.cng.4.4.0.nupkg.sha512",
-        "system.security.cryptography.cng.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.Text.Encoding.CodePages/4.5.1": {
       "sha512": "4J2JQXbftjPMppIHJ7IC+VXQ9XfEagN92vZZNoG12i+zReYlim5dMoXFC1Zzg7tsnKDM7JPo5bYfFK4Jheq44w==",
       "type": "package",
@@ -5016,6 +5139,22 @@
         "system.threading.tasks.extensions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "VideoLAN.LibVLC.iOS/3.3.10": {
+      "sha512": "rntid5tamGjgMyGMFJWht/7CaJcptz7h97oJtWR7Ju8zuI3xjVC8J6sRfszJw+rgfRBmGhfEelXmsZKFLXzMXg==",
+      "type": "package",
+      "path": "videolan.libvlc.ios/3.3.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/VideoLAN.LibVLC.iOS.targets",
+        "build/ios-device/DynamicMobileVLCKit.framework/DynamicMobileVLCKit",
+        "build/ios-device/DynamicMobileVLCKit.framework/Info.plist",
+        "build/ios-simulator/DynamicMobileVLCKit.framework/DynamicMobileVLCKit",
+        "build/ios-simulator/DynamicMobileVLCKit.framework/Info.plist",
+        "videolan.libvlc.ios.3.3.10.nupkg.sha512",
+        "videolan.libvlc.ios.nuspec"
       ]
     },
     "Xam.Plugin.LatestVersion/1.1.2": {
@@ -5215,13 +5354,14 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.6.0.967": {
-      "sha512": "t+ONiIyl1J2ISXkTvuexIRxsxUxOUUsqlP94ZLyuSatq5zHpEBFYECppJRHwRw40emUt3CgDdHFq80WS0jRMJQ==",
+    "Xamarin.Forms/4.7.0.1080": {
+      "sha512": "YN04zJoVBBKdhYnIK1lwZJTGCFrHJ+bUfqQK4aKy8oDjthh5JlNcjetUS+eV+JK9XcmYpS2SxpmDxFFXxSfONQ==",
       "type": "package",
-      "path": "xamarin.forms/4.6.0.967",
+      "path": "xamarin.forms/4.7.0.1080",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Assets/xamarin_128x128.png",
         "build/MonoAndroid10/proguard.cfg",
         "build/XCODE10/Xamarin.Forms.Platform.iOS.dll",
         "build/XCODE10/Xamarin.Forms.Platform.iOS.pdb",
@@ -5301,8 +5441,8 @@
         "lib/MonoAndroid10.0/ja/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid10.0/ko/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid10.0/ko/Xamarin.Forms.Xaml.xml",
-        "lib/MonoAndroid10.0/pt-br/Xamarin.Forms.Core.xml",
-        "lib/MonoAndroid10.0/pt-br/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid10.0/pt-BR/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid10.0/pt-BR/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid10.0/ru/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid10.0/ru/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid10.0/zh-Hans/Xamarin.Forms.Core.xml",
@@ -5334,8 +5474,8 @@
         "lib/MonoAndroid90/ja/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid90/ko/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid90/ko/Xamarin.Forms.Xaml.xml",
-        "lib/MonoAndroid90/pt-br/Xamarin.Forms.Core.xml",
-        "lib/MonoAndroid90/pt-br/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/pt-BR/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/pt-BR/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid90/ru/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid90/ru/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid90/zh-Hans/Xamarin.Forms.Core.xml",
@@ -5389,9 +5529,9 @@
         "lib/Xamarin.iOS10/nb/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/nl/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll",
-        "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Core.xml",
-        "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll",
-        "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Xaml.xml",
+        "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Core.xml",
+        "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Xaml.xml",
         "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/ro/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/ru/Xamarin.Forms.Core.xml",
@@ -5440,8 +5580,8 @@
         "lib/netstandard2.0/ja/Xamarin.Forms.Xaml.xml",
         "lib/netstandard2.0/ko/Xamarin.Forms.Core.xml",
         "lib/netstandard2.0/ko/Xamarin.Forms.Xaml.xml",
-        "lib/netstandard2.0/pt-br/Xamarin.Forms.Core.xml",
-        "lib/netstandard2.0/pt-br/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/pt-BR/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/pt-BR/Xamarin.Forms.Xaml.xml",
         "lib/netstandard2.0/ru/Xamarin.Forms.Core.xml",
         "lib/netstandard2.0/ru/Xamarin.Forms.Xaml.xml",
         "lib/netstandard2.0/zh-Hans/Xamarin.Forms.Core.xml",
@@ -5524,51 +5664,70 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.6.0.967.nupkg.sha512",
+        "xamarin.forms.4.7.0.1080.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
-    "ZXing.Net.Mobile/2.4.1": {
-      "sha512": "iCL2WcqOyUnC1iFFdzXijk0EXfoLMDqW88MyhoTZigSyhJZM2C5hKgSZVyfx9E35tgkde/IZwHkk8cVDnbQlYg==",
+    "ZXing.Net.Mobile/3.0.0-beta5": {
+      "sha512": "xlRphSYEiCc62vIcaX22z46kLnyLVqzYXuUk1aOtvtn8ZOLfQPuS43p73B1c/VLNnDbwrvZ+LhN2MGoxU+lWBg==",
       "type": "package",
-      "path": "zxing.net.mobile/2.4.1",
+      "path": "zxing.net.mobile/3.0.0-beta5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid71/ZXing.Net.Mobile.Core.dll",
-        "lib/MonoAndroid71/ZXingNetMobile.dll",
-        "lib/MonoAndroid71/zxing.portable.dll",
-        "lib/UAP10/ZXing.Net.Mobile.Core.dll",
-        "lib/UAP10/ZXingNetMobile.dll",
-        "lib/UAP10/ZXingNetMobile.pri",
-        "lib/UAP10/ZXingNetMobile/ZXingNetMobile.xr.xml",
-        "lib/UAP10/zxing.portable.dll",
-        "lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll",
-        "lib/Xamarin.iOS10/ZXingNetMobile.dll",
-        "lib/Xamarin.iOS10/zxing.portable.dll",
-        "lib/netstandard1.0/ZXing.Net.Mobile.Core.dll",
-        "lib/netstandard1.0/ZXingNetMobile.dll",
-        "lib/netstandard1.0/zxing.portable.dll",
-        "zxing.net.mobile.2.4.1.nupkg.sha512",
+        "icon.png",
+        "lib/monoandroid10.0/ZXingNetMobile.dll",
+        "lib/monoandroid10.0/ZXingNetMobile.pdb",
+        "lib/monoandroid10.0/zxing.dll",
+        "lib/monoandroid90/ZXingNetMobile.dll",
+        "lib/monoandroid90/ZXingNetMobile.pdb",
+        "lib/monoandroid90/zxing.dll",
+        "lib/netstandard2.0/ZXingNetMobile.dll",
+        "lib/netstandard2.0/ZXingNetMobile.pdb",
+        "lib/netstandard2.0/zxing.dll",
+        "lib/tizen40/ZXingNetMobile.dll",
+        "lib/tizen40/ZXingNetMobile.pdb",
+        "lib/tizen40/zxing.dll",
+        "lib/uap10.0.16299/ZXingNetMobile.dll",
+        "lib/uap10.0.16299/ZXingNetMobile.pdb",
+        "lib/uap10.0.16299/ZXingNetMobile.pri",
+        "lib/uap10.0.16299/ZXingNetMobile/ScanPage.xaml",
+        "lib/uap10.0.16299/ZXingNetMobile/ZXingNetMobile.xr.xml",
+        "lib/uap10.0.16299/ZXingNetMobile/ZXingScannerControl.xaml",
+        "lib/uap10.0.16299/zxing.dll",
+        "lib/xamarinios10/ZXingNetMobile.dll",
+        "lib/xamarinios10/ZXingNetMobile.pdb",
+        "lib/xamarinios10/zxing.dll",
+        "lib/xamarinmac20/ZXingNetMobile.dll",
+        "lib/xamarinmac20/ZXingNetMobile.pdb",
+        "lib/xamarinmac20/zxing.dll",
+        "zxing.net.mobile.3.0.0-beta5.nupkg.sha512",
         "zxing.net.mobile.nuspec"
       ]
     },
-    "ZXing.Net.Mobile.Forms/2.4.1": {
-      "sha512": "7z+MfL8TbfE36s1GGvrnlkhLUOV5dgdn1gYhUb3GU2W6YXzpfF39k6EqkmFsyNm1O07evTaKFgh7UTOqcWub3g==",
+    "ZXing.Net.Mobile.Forms/3.0.0-beta5": {
+      "sha512": "T7V68m6c19KIjZnr59V9VxD6MW/r9VMrd5QD+JJPPEsedszFDAu0w7MkwxJHOsarHef6rTRBBHFrLe+QWDOG0w==",
       "type": "package",
-      "path": "zxing.net.mobile.forms/2.4.1",
+      "path": "zxing.net.mobile.forms/3.0.0-beta5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid71/ZXing.Net.Mobile.Forms.Android.dll",
-        "lib/MonoAndroid71/ZXing.Net.Mobile.Forms.dll",
-        "lib/UAP10/ZXing.Net.Mobile.Forms.WindowsUniversal.dll",
-        "lib/UAP10/ZXing.Net.Mobile.Forms.WindowsUniversal.pri",
-        "lib/UAP10/ZXing.Net.Mobile.Forms.dll",
-        "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.dll",
-        "lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.iOS.dll",
-        "lib/netstandard1.0/ZXing.Net.Mobile.Forms.dll",
-        "zxing.net.mobile.forms.2.4.1.nupkg.sha512",
+        "icon.png",
+        "lib/monoandroid10.0/ZXing.Net.Mobile.Forms.dll",
+        "lib/monoandroid10.0/ZXing.Net.Mobile.Forms.pdb",
+        "lib/monoandroid90/ZXing.Net.Mobile.Forms.dll",
+        "lib/monoandroid90/ZXing.Net.Mobile.Forms.pdb",
+        "lib/netstandard2.0/ZXing.Net.Mobile.Forms.dll",
+        "lib/netstandard2.0/ZXing.Net.Mobile.Forms.pdb",
+        "lib/tizen40/ZXing.Net.Mobile.Forms.dll",
+        "lib/tizen40/ZXing.Net.Mobile.Forms.pdb",
+        "lib/uap10.0.16299/ZXing.Net.Mobile.Forms.dll",
+        "lib/uap10.0.16299/ZXing.Net.Mobile.Forms.pdb",
+        "lib/xamarinios10/ZXing.Net.Mobile.Forms.dll",
+        "lib/xamarinios10/ZXing.Net.Mobile.Forms.pdb",
+        "lib/xamarinmac20/ZXing.Net.Mobile.Forms.dll",
+        "lib/xamarinmac20/ZXing.Net.Mobile.Forms.pdb",
+        "zxing.net.mobile.forms.3.0.0-beta5.nupkg.sha512",
         "zxing.net.mobile.forms.nuspec"
       ]
     },
@@ -5580,32 +5739,34 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
-      "Acr.UserDialogs >= 7.1.0.442",
+      "Acr.UserDialogs >= 7.1.0.446",
       "AiForms.SettingsView >= 1.2.14-pre",
       "FreezeTest >= 1.0.0",
-      "MailKit >= 2.7.0",
-      "Microsoft.AppCenter >= 3.2.2",
-      "Microsoft.AppCenter.Analytics >= 3.2.2",
-      "Microsoft.AppCenter.Crashes >= 3.2.2",
+      "LibVLCSharp.Forms >= 3.4.6",
+      "MailKit >= 2.8.0",
+      "Microsoft.AppCenter >= 3.3.0",
+      "Microsoft.AppCenter.Analytics >= 3.3.0",
+      "Microsoft.AppCenter.Crashes >= 3.3.0",
       "Microsoft.CSharp >= 4.7.0",
       "Microsoft.CodeAnalysis.CSharp >= 3.6.0",
       "Microsoft.CodeAnalysis.Common >= 3.6.0",
       "Microsoft.CodeAnalysis.FxCopAnalyzers >= 3.0.0",
       "Microsoft.CodeQuality.Analyzers >= 3.0.0",
-      "Microsoft.Extensions.DependencyInjection >= 3.1.5",
-      "Microsoft.Extensions.Logging >= 3.1.5",
+      "Microsoft.Extensions.DependencyInjection >= 3.1.6",
+      "Microsoft.Extensions.Logging >= 3.1.6",
       "Newtonsoft.Json >= 12.0.3",
-      "Plugin.NFC >= 0.1.16",
+      "Plugin.NFC >= 0.1.17",
       "Plugin.Permissions >= 6.0.1",
       "Steema.TeeChart.NET.Xamarin.Forms >= 4.2020.5.28",
+      "VideoLAN.LibVLC.iOS >= 3.3.10",
       "Xam.Plugin.LatestVersion >= 1.1.2",
       "Xam.Plugin.Media >= 5.0.1",
       "Xam.Plugin.Screenshot >= 2.0.3",
       "Xam.Plugin.SimpleAudioPlayer >= 1.4.0",
       "Xamarin.Essentials >= 1.5.3.2",
-      "Xamarin.Forms >= 4.6.0.967",
-      "ZXing.Net.Mobile >= 2.4.1",
-      "ZXing.Net.Mobile.Forms >= 2.4.1"
+      "Xamarin.Forms >= 4.7.0.1080",
+      "ZXing.Net.Mobile >= 3.0.0-beta5",
+      "ZXing.Net.Mobile.Forms >= 3.0.0-beta5"
     ]
   },
   "packageFolders": {
@@ -5652,27 +5813,31 @@
         "dependencies": {
           "Acr.UserDialogs": {
             "target": "Package",
-            "version": "[7.1.0.442, )"
+            "version": "[7.1.0.446, )"
           },
           "AiForms.SettingsView": {
             "target": "Package",
             "version": "[1.2.14-pre, )"
           },
+          "LibVLCSharp.Forms": {
+            "target": "Package",
+            "version": "[3.4.6, )"
+          },
           "MailKit": {
             "target": "Package",
-            "version": "[2.7.0, )"
+            "version": "[2.8.0, )"
           },
           "Microsoft.AppCenter": {
             "target": "Package",
-            "version": "[3.2.2, )"
+            "version": "[3.3.0, )"
           },
           "Microsoft.AppCenter.Analytics": {
             "target": "Package",
-            "version": "[3.2.2, )"
+            "version": "[3.3.0, )"
           },
           "Microsoft.AppCenter.Crashes": {
             "target": "Package",
-            "version": "[3.2.2, )"
+            "version": "[3.3.0, )"
           },
           "Microsoft.CSharp": {
             "target": "Package",
@@ -5700,11 +5865,11 @@
           },
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
-            "version": "[3.1.5, )"
+            "version": "[3.1.6, )"
           },
           "Microsoft.Extensions.Logging": {
             "target": "Package",
-            "version": "[3.1.5, )"
+            "version": "[3.1.6, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",
@@ -5712,7 +5877,7 @@
           },
           "Plugin.NFC": {
             "target": "Package",
-            "version": "[0.1.16, )"
+            "version": "[0.1.17, )"
           },
           "Plugin.Permissions": {
             "target": "Package",
@@ -5721,6 +5886,10 @@
           "Steema.TeeChart.NET.Xamarin.Forms": {
             "target": "Package",
             "version": "[4.2020.5.28, )"
+          },
+          "VideoLAN.LibVLC.iOS": {
+            "target": "Package",
+            "version": "[3.3.10, )"
           },
           "Xam.Plugin.LatestVersion": {
             "target": "Package",
@@ -5744,15 +5913,15 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.6.0.967, )"
+            "version": "[4.7.0.1080, )"
           },
           "ZXing.Net.Mobile": {
             "target": "Package",
-            "version": "[2.4.1, )"
+            "version": "[3.0.0-beta5, )"
           },
           "ZXing.Net.Mobile.Forms": {
             "target": "Package",
-            "version": "[2.4.1, )"
+            "version": "[3.0.0-beta5, )"
           }
         }
       }

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:renderers="clr-namespace:AiForms.Renderers;assembly=SettingsView"
+             mc:Ignorable="d"
+             x:Class="FreezeTest.Views.SettingsView">
+			<renderers:SettingsView>
+				<renderers:Section Title="Test Section">
+					<renderers:ButtonCell Title="Button" />
+					<renderers:CommandCell Title="Command" />
+					<renderers:LabelCell Title="Label" />
+					<renderers:NumberPickerCell Title="NumberPicker" />
+					<renderers:CheckboxCell Title="Check" />
+					<renderers:SwitchCell Title="Switch" />
+					<renderers:TextPickerCell Title="TextPicker" />
+					<renderers:PickerCell Title="Picker" />
+					<renderers:EntryCell Title="Entry" />
+					<renderers:TimePickerCell Title="TimePicker" />
+					<renderers:DatePickerCell Title="DatePicker" />
+				</renderers:Section>
+			</renderers:SettingsView>
+</StackLayout>

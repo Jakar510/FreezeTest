@@ -29,17 +29,28 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-    <!-- Your Pages -->
-    <TabBar>
-        <Tab Title="Browse" Icon="tab_feed.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
-        </Tab>
-        <Tab Title="About" Icon="tab_about.png">
-            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
-        </Tab>
-    </TabBar>
+	<!-- Your Pages -->
+    <FlyoutItem Title="Nav"
+                Icon="tab_about.png">
+	    <ShellContent ContentTemplate="{DataTemplate local:NavStackTest}" />
+    </FlyoutItem>
 
-    <!-- Optional Templates 
+	<FlyoutItem Title="Browse" Icon="tab_feed.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
+	</FlyoutItem>
+
+    <FlyoutItem Title="About"
+                Icon="tab_about.png">
+	    <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="SV"
+                Icon="tab_about.png">
+	    <ShellContent ContentTemplate="{DataTemplate local:SettingsViewPage}" />
+    </FlyoutItem>
+
+
+	<!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
 
     // This header appears at the top of the Flyout.

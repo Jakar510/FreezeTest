@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -19,13 +20,13 @@ namespace FreezeTest.ViewModels
 		{
 			Title = "Browse";
 			Items = new ObservableCollection<Item>();
-			LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+			LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand().ConfigureAwait(true));
 
 			MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
 			{
 				var newItem = item as Item;
 				Items.Add(newItem);
-				await DataStore.AddItemAsync(newItem);
+				await DataStore.AddItemAsync(newItem).ConfigureAwait(true);
 			});
 		}
 
@@ -36,8 +37,8 @@ namespace FreezeTest.ViewModels
 			try
 			{
 				Items.Clear();
-				var items = await DataStore.GetItemsAsync(true);
-				foreach ( var item in items )
+				IEnumerable<Item> items = await DataStore.GetItemsAsync(true).ConfigureAwait(true);
+				foreach ( Item item in items )
 				{
 					Items.Add(item);
 				}
